@@ -43,5 +43,5 @@ typedef void(*ota_info)(ota_info_status infoStatus, int progress,int  file_len);
 
 
 esp_err_t ota_from_sdcard(char *path,ota_info callback);
-
+esp_err_t ota_spiffs_from_sdcard(char *path,ota_info callback);
 #endif //ESP32_NAT_ROUTER_OTA_SDCARD_H

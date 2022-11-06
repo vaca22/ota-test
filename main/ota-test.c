@@ -11,6 +11,8 @@ void app_main(void)
 {
     sd_card_init();
   //  ota_from_sdcard("/sdcard/ota/toycloud_m01_esp32.bin",ota_callback) ;
+
+    ota_spiffs_from_sdcard("/sdcard/a.bin",ota_callback) ;
     spiffs_mount_storage("/data");
 
 
@@ -19,7 +21,7 @@ void app_main(void)
         ESP_LOGE("TAG", "Failed to open file for reading");
         return;
     }
-    ESP_LOGE("TAG", "Failed to opsdfdsen file for reading");
+
     // Read a line from file
     char line[64];
     fread(line, 1,4, f);
