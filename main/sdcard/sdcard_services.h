@@ -49,6 +49,8 @@ bool sd_card_write_file(char *filepath, char *buf, size_t len);
 
 bool sd_is_mounted;
 
+esp_err_t spiffs_mount_storage(const char* base_path);
+
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif
